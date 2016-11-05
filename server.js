@@ -70,9 +70,6 @@ app.get("/", function (req, res) {
 
 });
 
-
-
-
 app.get('/scrape', function (err, res) {
 
 //  var myArticle = [];
@@ -104,16 +101,12 @@ app.get('/scrape', function (err, res) {
       var entry = new Article(result);
 
       entry.save(function (err, doc) {
-//        console.log(doc);
 
       })
 
     });
 
 
-
-//    console.log(myArticle);
-//    res.json(res);
 
 
 
@@ -136,12 +129,6 @@ app.get('/articles', function (req, res) {
     }
   });
 });
-
-
-
-
-
-
 
 
 

@@ -1,30 +1,22 @@
 <div class="container">
-  <div class="jumbotron">
-    <h1>Lets scrap some articles</h1>
-
-  </div>
-
-  <div class="row">
-
-    <div class="col-xs-8 articles">
-
-      {{#each doc}}
-
-      <p id="article-content" ><a href="{{this.link}}"><h2>{{this.title}}</h2></a></p>
-      <p>
-        <h3 id="article-content">{{this.articleNote}}</h3></p>
-
-
-      <img src="{{this.image}}"> 
-    
-    {{/each}}
-
+    <div class="jumbotron">
+        <h1>Lets scrap some articles</h1>
     </div>
 
+    <div class="row">
+        <div class="col-xs-8 articles">
 
+            {{#each doc}}
 
+                <p id="article-content"><a href="{{this.link}}"><h2>{{this.title}}</h2></a></p>
+                <p>
+                <h3 id="article-content">{{this.articleNote}}</h3></p>
 
-  </div>
+                <img src="{{this.image}}">
 
+            {{/each}}
+
+        </div>
+    </div>
 
 </div>
