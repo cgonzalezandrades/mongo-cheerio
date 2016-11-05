@@ -99,7 +99,7 @@ app.get('/scrape', function (err, res) {
 //        link: $(this).find('a').attr('href')
 //      });
 
-      console.log($(this).find('img').attr('src'));
+      // console.log($(this).find('img').attr('src'));
       
       var entry = new Article(result);
 
