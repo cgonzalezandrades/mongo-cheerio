@@ -7,9 +7,16 @@ var ArticleSchema = new Schema({
     require: true
   },
 
+  articleNote: {
+    type: String
+  },
+
   link: {
     type: String,
     require: true
+  },
+  image: {
+    type:String
   },
 
   note: {
