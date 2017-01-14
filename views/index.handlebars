@@ -5,35 +5,50 @@
     </div>
     <div class="row">
 
-      <div class="col-md-6">
-      
-<a href="https://aqueous-falls-53542.herokuapp.com/scrape"><button id="buttons" type="button" class="btn btn-success">Scrape Articles</button></a>
-        
-<!--        https://aqueous-falls-53542.herokuapp.com/scrape-->
-        
+      <div class="col-md-4">
+
+        <a href="https://aqueous-falls-53542.herokuapp.com/scrape">
+          <button id="buttons" type="button" class="btn btn-success">Scrape Articles</button>
+        </a>
+
+
       </div>
-      <div class="col-md-6"></div>
-<a href="https://aqueous-falls-53542.herokuapp.com/delete"><button id="buttons" type="button" class="btn btn-danger">Scrape Articles</button></a>
+      
+      <div class="col-md-4">
+
+        <a href="https://aqueous-falls-53542.herokuapp.com/articles">
+          <button id="buttons" type="button" class="btn btn-info">See JSON</button>
+        </a>
+
+
+      </div>
+      
+      
+      <div class="col-md-4">
+        <a href="https://aqueous-falls-53542.herokuapp.com/delete">
+          <button id="buttons" type="button" class="btn btn-danger">Scrape Articles</button></a>
+      </div>
+      
     </div>
   </div>
 
   <div class="container">
-  <div class="row">
-    <div class="col-xs-12 articles">
+    <div class="row">
+      <div class="col-xs-12 articles">
 
-      {{#each doc}}
+        {{#each doc}}
 
-      <p id="article-content"><a href="{{this.link}}"><h2>{{this.title}}</h2></a></p>
-      <p>
-        <h4 id="article-content">{{this.articleNote}}</h4></p>
+        <p id="article-content"><a href="{{this.link}}"><h2>{{this.title}}</h2></a></p>
+        <p>
+          <h4 id="article-content">{{this.articleNote}}</h4></p>
 
-      <img src="{{this.image}}">
-      <hr> {{/each}}
+        <img src="{{this.image}}">
+        <hr> {{/each}}
 
 
+      </div>
     </div>
   </div>
-</div>
 
 
 

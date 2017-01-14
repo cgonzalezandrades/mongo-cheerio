@@ -37,7 +37,8 @@ app.use(express.static('public'));
 
 
 // Database configuration with mongoose
-mongoose.connect('mongodb://heroku_w47t03b1:q2qg5opec25o4t20jaqqjfdj31@ds111479.mlab.com:11479/heroku_w47t03b1');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/newYokTimesArticles');
 //LOCAL CONNECTION: >->  'mongodb://localhost/newYokTimesArticles'
 
 //URI heroku connection: >->    'mongodb://heroku_w47t03b1:q2qg5opec25o4t20jaqqjfdj31@ds111479.mlab.com:11479/heroku_w47t03b1'
@@ -57,8 +58,9 @@ db.once('open', function () {
 
 var Note = require('./model/note');
 var Article = require('./model/article');
-
 var todaysPaper = "http://www.nytimes.com/pages/todayspaper/index.html?action=Click&module=HPMiniNav&region=TopBar&WT.nav=page&contentCollection=TodaysPaper&pgtype=Homepage";
+
+
 
 app.get("/", function (req, res) {
 
@@ -98,7 +100,7 @@ app.get('/scrape', function (err, res) {
     });
   });
 
-  res.send(" Thank you for scraping with us !");
+  res.redirect('/');
   
 });
 
@@ -125,7 +127,7 @@ app.get('/delete', function (req, res) {
     }
     // or send the doc to the browser as a json object
     else {
-      res.send("All Articles have been deleted !");
+      res.redirect("/");
     }
   });
 });
