@@ -101,7 +101,16 @@ app.get('/scrape', function (err, res) {
     });
   });
 
-  res.redirect('/');
+  Article.find({}, function (err, doc) {
+    // log any errors
+    if (err) {
+      console.log(err);
+    }
+    // or send the doc to the browser as a json object
+    else {
+      res.redirect("/");
+    }
+  });
   
 });
 
