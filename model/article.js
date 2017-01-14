@@ -24,7 +24,6 @@ var ArticleSchema = new Schema({
         ref: 'note'
     }
 
-
 });
 
 var Article = mongoose.model('Article', ArticleSchema);

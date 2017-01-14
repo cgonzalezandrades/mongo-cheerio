@@ -56,7 +56,6 @@ var Article = require('./model/article');
 
 var todaysPaper = "http://www.nytimes.com/pages/todayspaper/index.html?action=Click&module=HPMiniNav&region=TopBar&WT.nav=page&contentCollection=TodaysPaper&pgtype=Homepage";
 
-
 app.get("/", function (req, res) {
 
   var articles = Article.find({}, function (err, doc) {
@@ -67,7 +66,6 @@ app.get("/", function (req, res) {
     });
 
   })
-
 });
 
 app.get('/scrape', function (err, res) {
@@ -87,29 +85,14 @@ app.get('/scrape', function (err, res) {
       result.text = $(this).children('p').text();
       result.link = $(this).find('a').attr('href');
       result.image = $(this).find('img').attr('src');
-//      result.image = $(this).find('img').text();
 
-
-//      myArticle.push({
-//        title: $(this).children('h3').text(),
-//        text: $(this).children('p').text(),
-//        link: $(this).find('a').attr('href')
-//      });
-
-      // console.log($(this).find('img').attr('src'));
       
       var entry = new Article(result);
 
       entry.save(function (err, doc) {
 
       })
-
     });
-
-
-
-
-
   });
 
   res.send("scrape completed");
@@ -132,6 +115,8 @@ app.get('/articles', function (req, res) {
 
 
 
-app.listen(3001, function () {
-  console.log("app running on port 3001");
-});
+var PORT = process.env.PORT || 3002;
+app.listen(PORT, function () {
+  console.log('IM LISTENING IS PORT ' + PORT);
+
+})
