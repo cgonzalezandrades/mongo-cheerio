@@ -37,8 +37,11 @@ app.use(express.static('public'));
 
 
 // Database configuration with mongoose
-mongoose.connect('mongodb://heroku_w47t03b1:q2qg5opec25o4t20jaqqjfdj31@ds111479.mlab.com:11479/heroku_w47t03b1');
-//'mongodb://localhost/newYokTimesArticles'
+mongoose.connect('mongodb://localhost/newYokTimesArticles');
+//LOCAL CONNECTION: >->  'mongodb://localhost/newYokTimesArticles'
+
+//URI heroku connection: >->    'mongodb://heroku_w47t03b1:q2qg5opec25o4t20jaqqjfdj31@ds111479.mlab.com:11479/heroku_w47t03b1'
+
 var db = mongoose.connection;
 
 // show any mongoose errors
@@ -71,7 +74,6 @@ app.get("/", function (req, res) {
 
 app.get('/scrape', function (err, res) {
 
-//  var myArticle = [];
 
   request(todaysPaper, function (error, response, html) {
 
@@ -96,13 +98,27 @@ app.get('/scrape', function (err, res) {
     });
   });
 
-  res.send("scrape completed");
+  res.send(" Thank you for scraping with us !");
   
 });
 
 app.get('/articles', function (req, res) {
   // grab every doc in the Articles array
   Article.find({}, function (err, doc) {
+    // log any errors
+    if (err) {
+      console.log(err);
+    }
+    // or send the doc to the browser as a json object
+    else {
+      res.json(doc);
+    }
+  });
+});
+
+app.get('/delete', function (req, res) {
+  // grab every doc in the Articles array
+  Article.remove({}, function (err, doc) {
     // log any errors
     if (err) {
       console.log(err);

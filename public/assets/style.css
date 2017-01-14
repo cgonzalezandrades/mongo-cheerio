@@ -1,7 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css?family=News+Cycle');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body{
+ background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/newspaper-background.png");
+   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
 .articles{
-background-color: rgb(245,245,245);
+background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+ 
 }
 
 a:hover{
  text-decoration: none;
+  
 }
+
+a {
+  color: white;
+font-family: 'Merriweather', serif;
+  font-weight: 600;
+}
+
+.footer-area{
+  background-color: white;
+  height: 100px
+}
+
+h4{
+  color: white;
+  font-family: 'News Cycle', sans-serif;
+}
+
+.jumbotron {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.jumbotron h1{
+  margin-bottom: 40px;
+}
+
+#buttons{
+  font-family: 'Pacifico', cursive;
+}
+
+/*--------------------------Sticky Footer--------------------*/
+
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+.footer,
+.push {
+  height: 50px;
