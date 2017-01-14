@@ -125,7 +125,7 @@ app.get('/delete', function (req, res) {
     }
     // or send the doc to the browser as a json object
     else {
-      res.json(doc);
+      res.send("All Articles have been deleted !");
     }
   });
 });
