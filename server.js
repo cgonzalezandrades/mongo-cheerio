@@ -38,7 +38,8 @@ app.use(express.static('public'));
 
 // Database configuration with mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/newYokTimesArticles');
+mongoose.connect('mongodb://heroku_w47t03b1:q2qg5opec25o4t20jaqqjfdj31@ds111479.mlab.com:11479/heroku_w47t03b1');
+
 //LOCAL CONNECTION: >->  'mongodb://localhost/newYokTimesArticles'
 
 //URI heroku connection: >->    'mongodb://heroku_w47t03b1:q2qg5opec25o4t20jaqqjfdj31@ds111479.mlab.com:11479/heroku_w47t03b1'
