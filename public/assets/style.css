@@ -31,6 +31,19 @@ font-family: 'Merriweather', serif;
   font-weight: 600;
 }
 
+#author{
+  text-align: center;
+}
+
+#carlos-shadow{
+  color: #333333;
+}
+
+#buttons{
+  font-family: 'Pacifico', cursive;
+}
+
+
 .footer-area{
   background-color: white;
   height: 100px
@@ -50,9 +63,6 @@ h4{
   margin-bottom: 40px;
 }
 
-#buttons{
-  font-family: 'Pacifico', cursive;
-}
 
 /*--------------------------Sticky Footer--------------------*/
 

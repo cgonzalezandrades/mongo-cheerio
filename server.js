@@ -106,7 +106,7 @@ app.get('/scrape', function (err, res) {
     if (err) {
       console.log(err);
     }
-    // or send the doc to the browser as a json object
+    // once scrape button is pressed, redirect to main page
     else {
       res.redirect("/");
     }
@@ -135,7 +135,7 @@ app.get('/delete', function (req, res) {
     if (err) {
       console.log(err);
     }
-    // or send the doc to the browser as a json object
+    // once delete button is pressed, redirect to main page
     else {
       res.redirect("/");
     }
