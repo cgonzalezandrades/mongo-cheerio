@@ -23,12 +23,12 @@ Mongo-Cheerio web uses several Node.js packages with focus in Cheerio and Mongo 
  User can:
  
  1. Scrape Articles by pressing the scrape button.  
- <img src="public/images/scrapeButton.png" alt="products for sale" width ="20%" height="3%"/>.     
+ <img src="public/images/scrapeButton.png" alt="products for sale" width ="70px%" height="20px"/>.     
  
  2. Delete the articles scraped.  
-  <img src="public/images/deleteButton.png" alt="products for sale" width ="20%" height="3%"/>.
+  <img src="public/images/deleteButton.png" alt="products for sale" width ="70px%" height="20px"/>.
  3. See the incoming JSON Object.  
- <img src="public/images/jsonButton.png" alt="products for sale" width ="20%" height="3%"/>.
+ <img src="public/images/jsonButton.png" alt="products for sale" width ="70px%" height="20px"/>.
  
  
 
