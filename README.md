@@ -1,8 +1,16 @@
 # Mongo-cheerio
 
-This is web app that uses several packages with focus in Cheerio and Mongo db.
+Mongo-Cheerio web uses several Node.js packages with focus in Cheerio and Mongo db.
 
-## npmPackages
+## Languages
+- HTML
+- CSS
+- JavaScript
+- Node.Js
+- MongoDB
+- JSON
+
+## npm Packages
 - cheerio
  - moongose
  - handlebars
@@ -10,7 +18,16 @@ This is web app that uses several packages with focus in Cheerio and Mongo db.
  - express
  - request
  
+ Mongo-Cheerio Reads through the NYT API to requesting JSON objects of the 5 headings of the day. Once this request is succesfully process, Mongo-Cheerio App stores this data in MongoDB. Then, headings are displayed to the user in a friendly format.
  
-Work in progress... :trollface:
+ User can:
+ 
+ 1. Scrape Articles by pressing the scrape button.
+ <img src="/images/scrapeButton.png" alt="products for sale " width ="50%"/>.     
+ 
+ 2. Delete the articles scraped. 
+ 3. See the incoming JSON Object.
+ 
+ 
 
 
