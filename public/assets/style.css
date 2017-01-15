@@ -31,7 +31,7 @@ font-family: 'Merriweather', serif;
   font-weight: 600;
 }
 
-#author{
+.author{
   text-align: center;
 }
 
@@ -46,7 +46,7 @@ font-family: 'Merriweather', serif;
 
 .footer-area{
   background-color: white;
-  height: 100px
+  height: 150px
 }
 
 h4{
